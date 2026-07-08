@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antonio O — projects</title>
+  <meta name="description" content="Projects by Antonio O — data, quality, culture, coding and more.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.24.0/dist/tabler-icons.min.css">
+  <style>
+    :root {
+      --bg:#f6f7f9; --card:#fff; --ink:#1b2230; --muted:#647089; --faint:#8b95a7;
+      --line:#e4e8ef; --accent:#2f6df6; --accent-soft:#eaf1ff;
+      --purple:#7c5cff; --green:#1a9e5f; --amber:#c98a1a;
+      --radius:12px;
+    }
+    :root[data-theme="dark"] {
+      --bg:#0f131a; --card:#161c26; --ink:#eef1f6; --muted:#9aa6bd; --faint:#6b7688;
+      --line:#232c3a; --accent:#5b8bff; --accent-soft:#1b2740;
+      --purple:#9d86ff; --green:#3fb87f; --amber:#e0a53a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --bg:#0f131a; --card:#161c26; --ink:#eef1f6; --muted:#9aa6bd; --faint:#6b7688;
+        --line:#232c3a; --accent:#5b8bff; --accent-soft:#1b2740;
+        --purple:#9d86ff; --green:#3fb87f; --amber:#e0a53a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--bg); color:var(--ink);
+      font:16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap { max-width:1080px; margin:0 auto; padding:52px 22px 90px; }
+    header.hero { margin-bottom:26px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+    .brand { display:inline-flex; align-items:center; gap:9px; font-weight:800; letter-spacing:-.02em; font-size:14px; color:var(--muted); text-transform:uppercase; }
+    .brand .dot { width:9px; height:9px; border-radius:50%; background:var(--accent); }
+    .switches { display:flex; gap:8px; }
+    .switch { display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--card); }
+    .switch button { border:none; background:transparent; color:var(--muted); padding:6px 11px; font-size:13px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:5px; line-height:1; transition:.15s; }
+    .switch button:hover { color:var(--accent); }
+    .switch button[aria-pressed="true"] { background:var(--accent); color:#fff; }
+    .switch button i { font-size:15px; }
+    h1 { font-size:clamp(26px,4vw,36px); letter-spacing:-.03em; margin:6px 0 6px; }
+    .tagline { color:var(--muted); font-size:17px; margin:0 0 14px; }
+    .social { display:flex; flex-wrap:wrap; gap:8px; }
+    .social a { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:5px 12px; transition:.15s; }
+    .social a:hover { border-color:var(--accent); color:var(--accent); }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:26px 0 8px; padding-bottom:20px; border-bottom:1px solid var(--line); }
+    .filters .lbl { font-size:13px; color:var(--faint); margin-right:2px; }
+    .chip { border:1px solid var(--line); background:var(--card); color:var(--ink); padding:6px 14px; border-radius:999px; font-size:13.5px; font-weight:600; cursor:pointer; transition:.15s; line-height:1; }
+    .chip:hover { border-color:var(--accent); }
+    .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .sec { margin-top:30px; }
+    .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+    .sec-head i { font-size:19px; }
+    .sec-head h2 { font-size:19px; letter-spacing:-.02em; margin:0; font-weight:700; }
+    .sec-head .count { font-size:12px; color:var(--muted); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:1px 8px; }
+    .soon { color:var(--faint); font-size:14px; margin:0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:14px; }
+    .card { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px; transition:transform .15s, border-color .15s; }
+    .card:hover { transform:translateY(-3px); border-color:var(--accent); }
+    .card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
+    .card-head h3 { font-size:16px; letter-spacing:-.01em; margin:0; font-weight:700; line-height:1.3; }
+    .status { flex-shrink:0; white-space:nowrap; font-size:11px; font-weight:700; }
+    .card .type { font-size:12.5px; font-weight:600; margin:3px 0 8px; }
+    .labels { display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 9px; }
+    .label { font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; border:1px solid currentColor; }
+    .card p { color:var(--muted); font-size:14px; margin:0 0 14px; flex:1; }
+    .links { display:flex; flex-wrap:wrap; gap:14px; }
+    .links a { display:inline-flex; align-items:center; gap:5px; font-size:13px; font-weight:600; color:var(--muted); text-decoration:none; }
+    .links a:hover { color:var(--accent); }
+    .links a i { font-size:15px; }
+    .empty { color:var(--muted); text-align:center; padding:50px 0; }
+    footer { margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    footer a { color:var(--accent); text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="topbar">
+        <span class="brand"><span class="dot"></span><span id="brand">Antonio O</span></span>
+        <div class="switches">
+          <div class="switch" id="theme" role="group" aria-label="Theme">
+            <button type="button" data-theme-val="light" aria-label="Light theme"><i class="ti ti-sun" aria-hidden="true"></i></button>
+            <button type="button" data-theme-val="dark" aria-label="Dark theme"><i class="ti ti-moon" aria-hidden="true"></i></button>
+          </div>
+          <div class="switch" id="lang" role="group" aria-label="Language">
+            <button type="button" data-lang-val="en">EN</button>
+            <button type="button" data-lang-val="pt">PT</button>
+          </div>
+        </div>
+      </div>
+      <h1 id="name">Antonio O</h1>
+      <p class="tagline" id="tagline"></p>
+      <nav class="social" id="social" aria-label="Social links"></nav>
+    </header>
+
+    <nav class="filters" id="filters" aria-label="Filter projects"></nav>
+
+    <main id="sections"></main>
+    <p class="empty" id="empty" hidden></p>
+
+    <footer><span id="footer"></span></footer>
+  </div>
+
+  <script>
+    var PLATFORM = {
+      github:    { icon: "ti-brand-github",    label: "GitHub" },
+      instagram: { icon: "ti-brand-instagram", label: "Instagram" },
+      youtube:   { icon: "ti-brand-youtube",   label: "YouTube" },
+      linkedin:  { icon: "ti-brand-linkedin",  label: "LinkedIn" },
+      web:       { icon: "ti-world",           label: "Site" }
+    };
+    var ACCENT = { accent: "var(--accent)", pro: "var(--purple)", success: "var(--green)", neutral: "var(--muted)" };
+    var STATUS = { live: { t: "● live", c: "var(--green)" }, wip: { t: "● wip", c: "var(--amber)" } };
+    var UI = {
+      en: { filter: "Filter", soon: "Coming soon", empty: "No projects match this filter.", source: "source" },
+      pt: { filter: "Filtrar", soon: "Em breve", empty: "Nenhum projeto corresponde a este filtro.", source: "código" }
+    };
+
+    var root = document.documentElement;
+    function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+    function sysDark() { return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches; }
+
+    var savedTheme = read("theme");
+    var theme = (savedTheme === "light" || savedTheme === "dark") ? savedTheme : (sysDark() ? "dark" : "light");
+    var savedLang = read("lang");
+    var lang = (savedLang === "en" || savedLang === "pt") ? savedLang : (String(navigator.language || "en").slice(0, 2) === "pt" ? "pt" : "en");
+
+    function applyTheme() { root.setAttribute("data-theme", theme); paintSwitch("theme", "data-theme-val", theme); }
+    function applyLangAttr() { root.setAttribute("lang", lang); paintSwitch("lang", "data-lang-val", lang); }
+    function paintSwitch(id, attr, val) {
+      Array.prototype.forEach.call(document.querySelectorAll("#" + id + " button"), function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute(attr) === val);
+      });
+    }
+    document.querySelectorAll("#theme button").forEach(function (b) {
+      b.onclick = function () { theme = b.getAttribute("data-theme-val"); store("theme", theme); applyTheme(); };
+    });
+    document.querySelectorAll("#lang button").forEach(function (b) {
+      b.onclick = function () { lang = b.getAttribute("data-lang-val"); store("lang", lang); applyLangAttr(); if (state.data) render(); };
+    });
+    applyTheme();
+    applyLangAttr();
+
+    var state = { data: null, tag: "*" };
+
+    fetch("projects.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { state.data = d; render(); })
+      .catch(function (e) {
+        document.getElementById("sections").innerHTML =
+          '<p class="empty">Could not load projects.json (' + e.message + '). Run a local server.</p>';
+      });
+
+    function t(v) { return (v && typeof v === "object" && !Array.isArray(v)) ? (v[lang] || v.en || v.pt || "") : (v == null ? "" : v); }
+    function ui(k) { return (UI[lang] || UI.en)[k]; }
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" })[c]; }); }
+    function accentFor(a) { return ACCENT[a] || ACCENT.accent; }
+
+    function render() {
+      var s = state.data.site || {};
+      document.title = (s.name || "Projects") + " — projects";
+      document.getElementById("brand").textContent = s.name || "";
+      document.getElementById("name").textContent = s.name || "";
+      document.getElementById("tagline").textContent = t(s.tagline);
+      document.getElementById("social").innerHTML = (s.social || []).map(function (l) {
+        var p = PLATFORM[l.platform] || { icon: "ti-link", label: l.label || l.platform };
+        return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener"><i class="ti ' + p.icon + '" aria-hidden="true"></i>' + esc(l.label || p.label) + "</a>";
+      }).join("");
+      document.getElementById("footer").innerHTML =
+        'Built with a small projects.json · <a href="https://github.com/antonioaurel" target="_blank" rel="noopener">' + ui("source") + "</a>";
+      renderFilters();
+      renderSections();
+    }
+
+    function renderFilters() {
+      document.getElementById("filters").innerHTML =
+        '<span class="lbl"><i class="ti ti-filter" aria-hidden="true"></i> ' + ui("filter") + "</span>" +
+        (state.data.filters || []).map(function (f) {
+          return '<button class="chip" data-tag="' + esc(f.tag) + '" aria-pressed="' + (state.tag === f.tag) + '">' + esc(t(f.label)) + "</button>";
+        }).join("");
+      Array.prototype.forEach.call(document.querySelectorAll(".chip"), function (b) {
+        b.onclick = function () { state.tag = b.getAttribute("data-tag"); renderFilters(); renderSections(); };
+      });
+    }
+
+    function matches(p) { return state.tag === "*" || (p.tags || []).indexOf(state.tag) !== -1; }
+
+    function cardHTML(p, accent) {
+      var st = STATUS[p.status];
+      var status = st ? '<span class="status" style="color:' + st.c + '">' + st.t + "</span>" : "";
+      var labels = (p.labels || []).map(function (l) {
+        return '<span class="label" style="color:' + accent + '">' + esc(t(l)) + "</span>";
+      }).join("");
+      var labelsHTML = labels ? '<div class="labels">' + labels + "</div>" : "";
+      var typeStr = t(p.type);
+      var typeHTML = typeStr ? '<div class="type" style="color:' + accent + '">' + esc(typeStr) + "</div>" : "";
+      var links = (p.links || []).map(function (l) {
+        var pl = PLATFORM[l.platform] || { icon: "ti-link", label: l.platform };
+        return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener"><i class="ti ' + pl.icon + '" aria-hidden="true"></i>' + esc(pl.label) + "</a>";
+      }).join("");
+      return '<article class="card">' +
+        '<div class="card-head"><h3>' + esc(t(p.title)) + "</h3>" + status + "</div>" +
+        labelsHTML + typeHTML +
+        "<p>" + esc(t(p.summary)) + "</p>" +
+        '<div class="links">' + links + "</div>" +
+      "</article>";
+    }
+
+    function renderSections() {
+      var host = document.getElementById("sections");
+      var anyVisible = false;
+      var sections = (state.data.sections || []).slice().sort(function (a, b) { return t(a.label).localeCompare(t(b.label)); });
+      host.innerHTML = sections.map(function (sec) {
+        var accent = accentFor(sec.accent);
+        var projs = (sec.projects || []).slice().sort(function (a, b) { return t(a.title).localeCompare(t(b.title)); });
+        var visible = projs.filter(matches);
+        if (state.tag !== "*" && visible.length === 0) return "";
+        anyVisible = anyVisible || visible.length > 0 || state.tag === "*";
+        var head = '<div class="sec-head"><i class="ti ' + sec.icon + '" style="color:' + accent + '" aria-hidden="true"></i>' +
+          "<h2>" + esc(t(sec.label)) + "</h2>" +
+          (visible.length ? '<span class="count">' + visible.length + "</span>" : "") + "</div>";
+        var body = visible.length
+          ? '<div class="grid">' + visible.map(function (p) { return cardHTML(p, accent); }).join("") + "</div>"
+          : '<p class="soon">' + ui("soon") + "</p>";
+        return '<section class="sec">' + head + body + "</section>";
+      }).join("");
+      var empty = document.getElementById("empty");
+      empty.textContent = ui("empty");
+      empty.hidden = anyVisible;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "site": {
+    "name": "Antonio O",
+    "tagline": {
+      "en": "Computer engineer · data, quality and culture",
+      "pt": "Engenheiro de computação · dados, qualidade e cultura"
+    },
+    "social": [
+      { "platform": "github",    "label": "GitHub",    "href": "https://github.com/antonioaurel" },
+      { "platform": "linkedin",  "label": "LinkedIn",  "href": "https://linkedin.com/in/antonioaurel" },
+      { "platform": "instagram", "label": "Instagram", "href": "https://instagram.com/conexoesdahistoria" }
+    ]
+  },
+  "filters": [
+    { "label": { "en": "All",         "pt": "Todos" },        "tag": "*" },
+    { "label": { "en": "Live",        "pt": "No ar" },        "tag": "live" },
+    { "label": { "en": "In progress", "pt": "Em progresso" }, "tag": "wip" },
+    { "label": { "en": "Data",        "pt": "Dados" },        "tag": "data" },
+    { "label": { "en": "AI",          "pt": "IA" },           "tag": "ai" },
+    { "label": { "en": "Culture",     "pt": "Cultura" },      "tag": "culture" },
+    { "label": { "en": "Coding",      "pt": "Código" },       "tag": "coding" }
+  ],
+  "sections": [
+    {
+      "id": "data", "label": { "en": "Data", "pt": "Dados" }, "icon": "ti-database", "accent": "accent",
+      "projects": [
+        {
+          "title": "Conexões da História",
+          "type": { "en": "Data visualization", "pt": "Visualização de dados" },
+          "status": "live",
+          "summary": { "en": "Interactive graph of Recife's historical connections.", "pt": "Grafo interativo das conexões históricas do Recife." },
+          "tags": ["data", "live"],
+          "links": [
+            { "platform": "web",       "href": "https://conexoesdahistoria.com" },
+            { "platform": "github",    "href": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" },
+            { "platform": "instagram", "href": "https://instagram.com/conexoesdahistoria" }
+          ]
+        },
+        {
+          "title": { "en": "Historical base cleaning", "pt": "Limpeza da base histórica" },
+          "type": { "en": "Data quality", "pt": "Qualidade de dados" },
+          "status": "wip",
+          "summary": { "en": "Validation and fill-rate monitoring of the base.", "pt": "Validação e monitoramento de preenchimento da base." },
+          "tags": ["data", "wip"],
+          "links": [
+            { "platform": "github", "href": "https://github.com/antonioaurel/data/tree/main/projects/historical-base-cleaning" }
+          ]
+        },
+        {
+          "title": { "en": "Event attendance prediction", "pt": "Predição de presença em eventos" },
+          "type": { "en": "Data prediction", "pt": "Predição de dados" },
+          "status": "wip",
+          "summary": { "en": "Predict real attendance at events organized through Facebook.", "pt": "Prever a presença real em eventos organizados pelo Facebook." },
+          "tags": ["data", "wip"],
+          "links": [
+            { "platform": "github", "href": "https://github.com/antonioaurel/data/tree/main/projects/event-attendance-prediction" }
+          ]
+        }
+      ]
+    },
+    { "id": "ai", "label": { "en": "AI", "pt": "IA" }, "icon": "ti-robot", "accent": "accent", "projects": [] },
+    { "id": "software-quality", "label": { "en": "Software quality", "pt": "Qualidade de software" }, "icon": "ti-shield-check", "accent": "neutral", "projects": [] },
+    {
+      "id": "personal", "label": { "en": "Personal Activities", "pt": "Atividades pessoais" }, "icon": "ti-confetti", "accent": "pro",
+      "projects": [
+        {
+          "title": "Troça Segura o Tonho · Charlie Brown",
+          "status": "", "labels": ["Carnaval"],
+          "summary": { "en": "Carnival troça — history and route.", "pt": "Troça carnavalesca — história e roteiro." },
+          "tags": ["culture", "carnaval"], "links": []
+        },
+        {
+          "title": "Maracatu Quebra Baque",
+          "status": "", "labels": ["Carnaval"],
+          "summary": { "en": "Maracatu group — profile and schedule.", "pt": "Grupo de maracatu — perfil e agenda." },
+          "tags": ["culture", "carnaval"], "links": []
+        },
+        {
+          "title": "Mapa do Frevo",
+          "status": "wip", "labels": ["Carnaval"],
+          "summary": { "en": "Interactive map of frevo across the city.", "pt": "Mapa interativo do frevo pela cidade." },
+          "tags": ["culture", "carnaval", "wip"], "links": []
+        }
+      ]
+    },
+    { "id": "articles", "label": { "en": "Articles", "pt": "Artigos" }, "icon": "ti-news", "accent": "neutral", "projects": [] },
+    { "id": "books", "label": { "en": "Books review", "pt": "Resenhas de livros" }, "icon": "ti-books", "accent": "neutral", "projects": [] },
+    { "id": "papers", "label": { "en": "Papers review", "pt": "Resenhas de artigos" }, "icon": "ti-file-text", "accent": "neutral", "projects": [] },
+    {
+      "id": "coding", "label": { "en": "Coding", "pt": "Código" }, "icon": "ti-code", "accent": "success",
+      "projects": [
+        { "title": { "en": "100 days of Playwright", "pt": "100 dias de Playwright" }, "type": { "en": "Coding challenge", "pt": "Desafio de código" }, "status": "wip", "summary": { "en": "Daily end-to-end testing exercises.", "pt": "Exercícios diários de testes end-to-end." }, "tags": ["coding", "wip"], "links": [] },
+        { "title": { "en": "100 days of Python", "pt": "100 dias de Python" }, "type": { "en": "Coding challenge", "pt": "Desafio de código" }, "status": "wip", "summary": { "en": "Daily Python problems and scripts.", "pt": "Problemas e scripts diários em Python." }, "tags": ["coding", "wip"], "links": [] },
+        { "title": { "en": "100 days of SQL", "pt": "100 dias de SQL" }, "type": { "en": "Coding challenge", "pt": "Desafio de código" }, "status": "wip", "summary": { "en": "Daily SQL queries and drills.", "pt": "Consultas e exercícios diários de SQL." }, "tags": ["coding", "wip"], "links": [] }
+      ]
+    },
+    { "id": "ppt", "label": "PPT", "icon": "ti-presentation", "accent": "neutral", "projects": [] }
+  ]
+}
