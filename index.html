@@ -459,7 +459,7 @@
       var items = list.map(function (c, i) {
         var num = String(i + 1).padStart(2, "0");
         var img = c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy">' : "";
-        var link = (c.link && c.link !== "#") ? extLink(c.link, "Read full case study") : "";
+        var link = (c.link && c.link !== "#") ? extLink(c.link, c.linkLabel || "Read full case study") : "";
         var tags = (c.tech || []).length
           ? '<div class="tags-sm" style="margin:0">' + c.tech.map(function (t) { return '<span class="pill">' + esc(t) + "</span>"; }).join("") + "</div>"
           : "<span></span>";

@@ -159,6 +159,16 @@
       "outcome": "A working proof-of-concept for event-attendance prediction that shows how data can turn planning from reactive to proactive.",
       "tech": ["Prediction", "Machine learning", "Data", "Concept"],
       "link": "https://github.com/antonioaurel/data/tree/main/projects/event-attendance-prediction"
+    },
+    {
+      "title": "Tracking Economic Impacts of a Carnival Bloco",
+      "img": "image/map-tonho.png",
+      "problem": "The cultural, economic and social footprint of a street carnival troça is felt by everyone around it but never actually measured, so its value to the neighbourhood stays anecdotal.",
+      "approach": "Modeled the movement of a carnival bloco with my own troça, \"Segura o Tonho\", as the case study. Integrated open data from Recife City Hall (orquestra schedules and payment values), Map of Frevo — a personal project cataloguing where and when blocos play — shirt-sales spreadsheets, and direct interviews with service providers and workers. Processed with Python and pandas and georeferenced through Google Maps, framing the economic chain around three pillars: infrastructure and services, the troça's public, and the people working within it.",
+      "outcome": "A proof of concept that turns the fluid nature of carnival into actionable insight. A troça of 300 people generates roughly R$ 9,500 in beverages and transport alone, benefiting around 50 people across multiple neighbourhoods, with supplies drawn from a ~10km radius — impact reaching well beyond the parade route. Tracking where workers spend their earnings (one percussionist returned R$ 1,300 of his R$ 2,700 into his own community, Brasília Teimosa) shows how data can evidence the role of cultural events in circulating local wealth.",
+      "tech": ["Python", "pandas", "Google Maps", "Open data", "Georeferencing"],
+      "link": "https://www.youtube.com/watch?v=FBczVOE7grQ",
+      "linkLabel": "Watch the talk"
     }
   ],
 
