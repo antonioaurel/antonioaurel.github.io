@@ -1,2 +1,6 @@
 .DS_Store
 node_modules/
+
+# Design handoff bundles — reference material, not part of the published site
+design_handoff_portfolio/
+*.zip

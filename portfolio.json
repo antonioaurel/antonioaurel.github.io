@@ -1,0 +1,208 @@
+{
+  "site": {
+    "name": "Antonio O",
+    "eyebrow": "QA · DATA QUALITY · AI · RESEARCH",
+    "about": "Senior QA, Data Quality Engineer, and AI researcher. I bridge software quality, data validation, and applied AI to help teams build reliable products and make decisions they can trust.",
+    "cv": "cv/AntonioOliveiraCV_QA-.pdf",
+    "portrait": "image/tom-profile.jpeg",
+    "contactIntro": "Open to QA, LLM quality, and data-quality roles, and AI engineering work — ping me.",
+    "social": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/aspo/" },
+      { "label": "GitHub",   "url": "https://github.com/antonioaurel" },
+      { "label": "Medium",   "url": "https://medium.com/@antonio-aureliano" }
+    ]
+  },
+
+  "experience": [
+    {
+      "id": "machinify",
+      "company": "Machinify",
+      "role": "Quality Engineer for LLMs · Quality Engineer",
+      "period": "2024 — 2026",
+      "summary": "Worked at the intersection of AI, healthcare, and data quality, ensuring machine-learning products delivered reliable, trustworthy outcomes. Collaborated with Product, Engineering, Data Science, and Business teams to validate AI workflows, healthcare data, and business rules throughout the development lifecycle.",
+      "responsibilities": [
+        "Validated AI models, healthcare data flows, and business-critical workflows",
+        "Designed testing strategies spanning functional, integration, regression, UAT, and data validation",
+        "Improved product reliability through quality metrics, data verification, and cross-functional collaboration"
+      ],
+      "tech": ["AI / ML validation", "LLM evaluation", "Healthcare data", "Functional", "Integration", "Regression", "UAT", "Data validation"]
+    },
+    {
+      "id": "greenlight",
+      "company": "Greenlight",
+      "role": "Software Quality Assurance Engineer",
+      "period": "2022 — 2024",
+      "summary": "Helped deliver a fintech platform serving over one million monthly users across Web, Android, and iOS. Partnered with Product, Engineering, and Analytics teams to ensure reliable releases, scalable QA processes, and trustworthy user insights through comprehensive testing and data validation.",
+      "responsibilities": [
+        "Delivered four major product releases with zero critical production defects",
+        "Designed testing strategies covering functional, regression, performance, compatibility, and analytics validation",
+        "Improved product quality through Firebase, Google Analytics, and risk-based testing"
+      ],
+      "tech": ["Firebase", "Google Analytics", "Risk-based testing", "Web", "Android", "iOS", "Analytics validation"]
+    },
+    {
+      "id": "thoughtworks",
+      "company": "Thoughtworks",
+      "role": "Software Quality Assurance Engineer",
+      "period": "2020 — 2022",
+      "summary": "Worked as a consultant across multiple client engagements, helping teams embed quality throughout the software development lifecycle. Collaborated with developers, product owners, designers, and business stakeholders to create tailored testing strategies that balanced product quality, delivery speed, and business goals.",
+      "responsibilities": [
+        "Built project-specific testing strategies for Web and Mobile applications",
+        "Applied risk-based testing, data-driven validation, and defect prioritization",
+        "Improved release confidence through close collaboration with engineering and product"
+      ],
+      "tech": ["Risk-based testing", "Data-driven validation", "Web", "Mobile", "Defect prioritization"]
+    },
+    {
+      "id": "samsung",
+      "company": "Samsung Electronics",
+      "role": "Software Quality Assurance Engineer",
+      "period": "2011 — 2020",
+      "summary": "Contributed to the quality of mobile applications and consumer-electronics products across nearly a decade of software development. Grew from manual testing into automation, quality strategy, and engineering best practices while working with large cross-functional teams in Agile environments.",
+      "responsibilities": [
+        "Automated functional and non-functional testing using Selenium and Appium",
+        "Introduced risk-based testing, traceability, and structured quality planning",
+        "Promoted collaborative quality through Agile, BDD, ATDD, and cross-functional teamwork"
+      ],
+      "tech": ["Selenium", "Appium", "BDD", "ATDD", "Agile", "Traceability"]
+    },
+    {
+      "id": "english-affairs",
+      "company": "English Affairs",
+      "role": "Business Analyst",
+      "period": "2010 — 2011",
+      "summary": "Worked closely with international clients to understand business needs and translate them into practical technology solutions. Combined business analysis, software validation, and IT consulting to improve operational processes and support successful software delivery.",
+      "responsibilities": [
+        "Analyzed business workflows and gathered requirements for custom software solutions",
+        "Advised clients on technology adoption, software selection, and IT team structure",
+        "Coordinated with development teams to validate requirements and ensure successful delivery"
+      ],
+      "tech": ["Business analysis", "Requirements gathering", "IT consulting", "Software validation"]
+    },
+    {
+      "id": "hpe",
+      "company": "Hewlett Packard Enterprise",
+      "role": "Information Technology Support Engineer",
+      "period": "2009 — 2010",
+      "summary": "Provided global technical support for enterprise customers while acting as a bridge between users, engineering, and QA teams. Beyond resolving complex technical issues, contributed to requirements analysis and feature planning across multinational projects.",
+      "responsibilities": [
+        "Delivered second-level technical support for enterprise hardware and software solutions",
+        "Collaborated with clients, developers, and QA teams to analyze requirements and improve product quality",
+        "Conducted on-site business analysis and solution planning across multiple countries"
+      ],
+      "tech": ["Enterprise support", "Requirements analysis", "QA collaboration", "Solution planning"]
+    }
+  ],
+
+  "work": [
+    {
+      "title": "Quality Assurance in Practice",
+      "img": "image/quality-assurance.jpeg",
+      "desc": "A shared look at how I approach quality assurance day-to-day — strategy, risk, and the mindset behind trustworthy releases.",
+      "problem": "Communicating what modern QA really involves",
+      "tech": ["QA", "Test strategy", "Risk-based testing"],
+      "links": [{ "label": "View post", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7334527423150972928/" }]
+    },
+    {
+      "title": "Functional Testing Automation",
+      "img": "https://playwrightsolutions.com/content/images/2024/05/image-16.png",
+      "shot": "e2e automation · code",
+      "desc": "A study and reference implementation of end-to-end UI automation patterns using Playwright, designed for reliability and ease of maintenance.",
+      "problem": "Reliable, maintainable end-to-end UI automation",
+      "tech": ["Playwright", "TypeScript", "E2E", "CI"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/antonioaurel/playwright-study" }]
+    },
+    {
+      "title": "Data Visualization",
+      "img": "image/conexoes.png",
+      "desc": "An interactive data-visualization exploring the historical connections and cultural heritage of Recife, my town, turning scattered archival records into an explorable, narrative-driven experience.",
+      "problem": "Making fragmented historical data explorable and meaningful",
+      "tech": ["Data visualization", "JavaScript", "Open data", "Storytelling"],
+      "links": [
+        { "label": "Live Demo", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/en/index.html" },
+        { "label": "Dashboard", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
+        { "label": "GitHub", "url": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" }
+      ]
+    },
+    {
+      "title": "Cross-Functional Testing Automation",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsS6bLR08jhV9k9NpgIvnyvt_tdP-9OhH505O_S4rEMg&s=10",
+      "shot": "load testing · results",
+      "desc": "Performance test variations built and combined with k6 to explore how systems behave under different load profiles.",
+      "problem": "Understanding system behaviour and limits under load",
+      "tech": ["k6", "Performance", "Load testing", "JavaScript"],
+      "links": [{ "label": "GitHub", "url": "https://github.com/antonioaurel/k6/tree/main/tests" }]
+    }
+  ],
+
+  "cases": [
+    {
+      "title": "Data quality for history connections",
+      "img": "image/data-quality.png",
+      "problem": "Recife's historical records were scattered across inconsistent sources, duplicated names, conflicting dates, and messy formats that made any analysis unreliable.",
+      "approach": "Built a data-cleaning and storytelling pipeline: profiling the raw records, defining validation rules, de-duplicating entities, and documenting every transformation so the process stayed transparent and reproducible.",
+      "outcome": "A trustworthy, structured dataset that powers the Recife History Connections visualization — and a narrative that shows the cleaning decisions behind it.",
+      "tech": ["Data cleaning", "Validation", "Storytelling", "Open data"],
+      "link": "https://antonioaurel.github.io/data/projects/historical-base-cleaning/data-cleaning-story-telling.html#1"
+    },
+    {
+      "title": "Self-maintenance of table test scripts with Claude",
+      "problem": "UI and table-based test scripts broke constantly as the product changed, and manual upkeep was eating into real testing time.",
+      "approach": "Used Claude to detect failing selectors and assertions, diagnose the cause, and propose self-healing updates to the scripts, keeping a human in the loop for review.",
+      "outcome": "Less time spent on brittle test maintenance and more confidence that the suite reflects the current product.",
+      "tech": ["Claude", "LLM", "Playwright", "Test maintenance"]
+    },
+    {
+      "title": "Predictive Presence System Concept",
+      "problem": "Events struggled to anticipate attendance, making staffing, space, and resource planning a guess.",
+      "approach": "Designed a concept that models historical attendance signals and event attributes to predict turnout, framing it as a decision-support tool rather than a black box.",
+      "outcome": "A working proof-of-concept for event-attendance prediction that shows how data can turn planning from reactive to proactive.",
+      "tech": ["Prediction", "Machine learning", "Data", "Concept"],
+      "link": "https://github.com/antonioaurel/data/tree/main/projects/event-attendance-prediction"
+    }
+  ],
+
+  "skills": [
+    { "group": "QUALITY ASSURANCE", "items": ["Test strategy", "Risk-Driven", "Impact Tracking", "Dependencies", "Quality gates"] },
+    { "group": "AUTOMATION",        "items": ["Playwright", "Selenium", "REST Assured", "CI/CD"] },
+    { "group": "DATA & ANALYTICS",  "items": ["SQL", "Airflow", "pandas", "Analytics", "Crashlytics"] },
+    { "group": "AI / ML",           "items": ["PyTorch", "LLMs", "scikit-learn", "Evaluation design"] },
+    { "group": "PROGRAMMING",       "items": ["Python", "TypeScript", "SQL"] },
+    { "group": "CLOUD & INFRA",     "items": ["Docker", "GitHub Actions"] },
+    { "group": "METHODS",           "items": ["Agile", "TDD", "DDD", "BDD", "Root-cause analysis"] },
+    { "group": "SOFT SKILLS",       "items": ["Stakeholder communication", "Mentoring", "EN / ES / PT"] }
+  ],
+
+  "beyond": [
+    {
+      "tag": "◐",
+      "title": "Carnival organization",
+      "desc": "I voluntarily lead the organization of a street carnival bloco called \"Bora Charlie Brown\", coordinating logistics, music, and hundreds of volunteers into one joyful, well-run celebration for families and friends, helping keep an incredible tradition alive.",
+      "img": "image/tonjo.png",
+      "link": "https://www.instagram.com/stories/highlights/18032147654598581/",
+      "linkLabel": "Instagram"
+    },
+    {
+      "tag": "◎",
+      "title": "Photography",
+      "desc": "Capturing people, places, and light, a practice in noticing detail, curating the pictures and sharing them, creating a mindset of calm that carries back into my work.",
+      "img": "image/joana.jpg"
+    },
+    {
+      "tag": "∑",
+      "title": "Math & History teacher",
+      "desc": "I've taught mathematics and history to teens, kids, and young adults, translating complex ideas into something people can genuinely understand.",
+      "img": "image/teach-bw.jpeg"
+    },
+    {
+      "tag": "≈",
+      "title": "Wind & water",
+      "desc": "Sailing man with a few miles to go. Teamwork, reading conditions, adjusting constantly, and staying calm under changing pressure.",
+      "img": "image/saiing.jpg"
+    }
+  ],
+
+  "education": [],
+  "certs": [],
+  "research": null
+}
