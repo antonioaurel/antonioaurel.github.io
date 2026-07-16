@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Antonio O — QA, Data Quality & AI</title>
-  <meta name="description" content="Antonio O — Senior QA, Data Quality Engineer and AI researcher. Selected work, case studies and experience.">
+  <title>Antonio Aureliano — Senior Quality Engineer</title>
+  <meta name="description" content="Antonio Aureliano — Senior Quality Engineer specializing in Software, Data and AI Systems. Selected projects, case studies and experience.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -46,8 +46,16 @@
     ::selection { background:var(--accent); color:var(--cta-fg); }
     img { max-width:100%; }
 
-    .mono { font-family:'JetBrains Mono', ui-monospace, monospace; }
-    .serif { font-family:'Newsreader', Georgia, serif; font-weight:400; }
+    a:focus-visible,
+    button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+
+    .skip-link {
+      position:absolute; left:-9999px; top:0; z-index:100;
+      background:var(--accent); color:var(--cta-fg);
+      padding:10px 18px; border-radius:0 0 8px 0; font-size:14px; font-weight:500;
+      text-decoration:none;
+    }
+    .skip-link:focus { left:0; }
 
     @keyframes rise   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
     @keyframes fadeIn { from { opacity:0; transform:translateY(6px);  } to { opacity:1; transform:none; } }
@@ -60,6 +68,7 @@
       border-bottom:1px solid var(--hair);
     }
     .nav-inner {
+      position:relative;
       max-width:1160px; margin:0 auto; padding:15px 34px;
       display:flex; align-items:center; justify-content:space-between; gap:20px;
     }
@@ -67,29 +76,34 @@
       display:flex; align-items:center; gap:11px; text-decoration:none;
       color:var(--text); font-weight:600; font-size:15px; letter-spacing:-.01em;
     }
-    .brand .dot { width:9px; height:9px; border-radius:50%; background:var(--accent); }
+    .brand .dot { width:9px; height:9px; border-radius:50%; background:var(--accent); flex-shrink:0; }
     .brand .period { color:var(--accent); }
     .nav-right { display:flex; align-items:center; gap:30px; }
     .nav-links { display:flex; gap:26px; font-size:13.5px; }
     .nav-links a { color:var(--muted); text-decoration:none; transition:color .12s; }
     .nav-links a:hover { color:var(--text); }
+    .nav-toggle {
+      display:none; width:34px; height:34px; border-radius:8px;
+      border:1px solid var(--border); background:transparent; color:var(--text);
+      cursor:pointer; font-size:15px; align-items:center; justify-content:center;
+    }
     .theme-btn {
       width:34px; height:34px; border-radius:50%; border:1px solid var(--border);
       background:transparent; color:var(--text); cursor:pointer; font-size:14px;
       display:flex; align-items:center; justify-content:center;
-      transition:border-color .2s;
+      transition:border-color .2s; flex-shrink:0;
     }
     .theme-btn:hover { border-color:var(--accent); }
     .cta {
       background:var(--accent); color:var(--cta-fg); font-size:13.5px; font-weight:500;
-      padding:9px 18px; border-radius:8px; text-decoration:none;
+      padding:9px 18px; border-radius:8px; text-decoration:none; white-space:nowrap;
       transition:background .12s;
     }
     .cta:hover { background:var(--accent-strong); }
 
     /* ---------- section shell ---------- */
     .sec { max-width:1160px; margin:0 auto; padding:80px 34px; scroll-margin-top:80px; }
-    .sec + .sec, .sec.ruled { border-top:1px solid var(--hair); }
+    .sec.ruled { border-top:1px solid var(--hair); }
     .eyebrow {
       font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:.18em;
       color:var(--accent); margin-bottom:20px;
@@ -110,7 +124,10 @@
     .hero-grid { display:grid; grid-template-columns:1.55fr 1fr; gap:56px; align-items:center; }
     .hero-copy { animation:rise .8s cubic-bezier(.16,1,.3,1) both; }
     .hero-eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.18em; color:var(--accent); margin-bottom:26px; }
-    .hero p { font-size:20px; line-height:1.6; color:var(--muted); margin:0 0 36px; max-width:50ch; scroll-margin-top:90px; }
+    /* deliberately not a display heading — same size as the hero copy around it */
+    .hero h1 { font-size:20px; font-weight:600; line-height:1.4; letter-spacing:-.01em; margin:0 0 6px; color:var(--text); }
+    .headline { font-size:20px; font-weight:400; line-height:1.5; color:var(--muted); margin:0 0 22px; max-width:50ch; }
+    .hero p.about { font-size:20px; line-height:1.6; color:var(--muted); margin:0 0 36px; max-width:50ch; scroll-margin-top:90px; }
     .hero-ctas { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:40px; }
     .btn-fill {
       background:var(--accent); color:var(--cta-fg); font-size:14.5px; font-weight:500;
@@ -140,7 +157,6 @@
       transition:border-color .2s; font:inherit; color:inherit; width:100%;
     }
     .exp-card:hover { border-color:var(--accent-strong); }
-    .exp-card:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
     .exp-card .co { font-family:'Newsreader',serif; font-size:25px; line-height:1.12; color:var(--text); letter-spacing:-.01em; }
     .exp-card .per { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.12em; color:var(--faint); margin-top:12px; }
     .exp-card[aria-expanded="true"]::after {
@@ -158,8 +174,8 @@
     .exp-role { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.06em; color:var(--muted); margin-top:6px; }
     .exp-panel p.sum { font-size:15.5px; color:var(--text); opacity:.82; margin:20px 0 26px; max-width:82ch; }
     .exp-resp { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:14px 34px; }
-    .exp-resp div { display:flex; gap:10px; font-size:14px; color:var(--muted); }
-    .exp-resp .bullet { color:var(--accent); }
+    .exp-resp div { display:flex; gap:10px; font-size:14px; color:var(--muted); text-align:left; }
+    .exp-resp .bullet { color:var(--accent); flex-shrink:0; }
     .exp-tech { margin-top:26px; padding-top:22px; border-top:1px solid var(--hair); }
 
     /* ---------- work ---------- */
@@ -176,7 +192,7 @@
     }
     .shot span { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--faint); }
     .work-body { padding:24px; flex:1; display:flex; flex-direction:column; }
-    .work-body h3 { font-size:19px; font-weight:600; margin:0 0 10px; }
+    .work-body h3 { font-size:19px; font-weight:600; margin:0 0 10px; line-height:1.35; }
     .work-body p { font-size:14.5px; color:var(--muted); margin:0 0 14px; }
     .problem { font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--accent); margin-bottom:16px; }
     .work-links { display:flex; flex-wrap:wrap; gap:18px; margin-top:auto; font-family:'JetBrains Mono',monospace; font-size:12.5px; }
@@ -185,26 +201,41 @@
     .tags-sm { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px; }
     .tags-sm .pill { font-size:11px; padding:4px 10px; }
 
-    /* ---------- cases ---------- */
-    .cases { display:flex; flex-direction:column; gap:22px; }
+    /* ---------- cases (4-up card grid) ---------- */
+    .cases { display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; }
     .case {
-      border:1px solid var(--border); border-radius:18px; background:var(--card); padding:34px;
+      border:1px solid var(--border); border-radius:16px; background:var(--card);
+      overflow:hidden; display:flex; flex-direction:column; transition:border-color .12s;
     }
-    .case > img {
-      width:100%; max-height:340px; object-fit:cover; border-radius:12px;
-      border:1px solid var(--hair); display:block; margin-bottom:26px;
-    }
-    .case-head { display:flex; align-items:baseline; gap:16px; margin-bottom:24px; }
-    .case-head .num { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); }
-    .case-head h3 { font-family:'Newsreader',serif; font-weight:400; font-size:26px; margin:0; }
-    .case-cols { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:24px; }
-    .case-cols p { font-size:14px; color:var(--muted); margin:0; }
+    .case:hover { border-color:var(--accent-strong); }
+    .case > img { width:100%; aspect-ratio:16/9; object-fit:cover; border-bottom:1px solid var(--hair); display:block; }
+    .case-body { padding:20px; display:flex; flex-direction:column; flex:1; }
+    .case-head { display:flex; align-items:baseline; gap:10px; margin-bottom:16px; }
+    .case-head .num { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); flex-shrink:0; }
+    .case-head h3 { font-family:'Newsreader',serif; font-weight:400; font-size:19px; line-height:1.2; margin:0; }
+    /* the context / approach / outcome detail sits below, stacked inside the card */
+    .case-block + .case-block { margin-top:14px; }
+    .case-block .label { margin-bottom:5px; }
+    .case-block p { font-size:13px; color:var(--muted); margin:0; line-height:1.5; }
     .case-foot {
-      display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center;
-      margin-top:24px; padding-top:22px; border-top:1px solid var(--hair);
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; align-items:center;
+      margin-top:18px; padding-top:16px; border-top:1px solid var(--hair);
     }
-    .case-foot a { font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); text-decoration:none; }
+    .case-foot a { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); text-decoration:none; }
     .case-foot a:hover { text-decoration:underline; }
+
+    /* ---------- writing & talks ---------- */
+    .rows { display:flex; flex-direction:column; }
+    .row-item {
+      display:grid; grid-template-columns:80px 1fr auto; gap:18px;
+      padding:20px 0; border-top:1px solid var(--hair); align-items:baseline;
+    }
+    .row-item:last-child { border-bottom:1px solid var(--hair); }
+    .row-item .kind { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:var(--accent); }
+    .row-item .title { font-size:16px; color:var(--text); margin-bottom:4px; }
+    .row-item .desc { font-size:14px; color:var(--muted); }
+    .row-item a { font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); text-decoration:none; white-space:nowrap; }
+    .row-item a:hover { text-decoration:underline; }
 
     /* ---------- research / education ---------- */
     .two-col { display:grid; grid-template-columns:1fr 1.3fr; gap:56px; align-items:start; }
@@ -233,10 +264,7 @@
       padding:20px 0; border-top:1px solid var(--hair); align-items:baseline;
     }
     .skill-row:last-child { border-bottom:1px solid var(--hair); }
-    .skill-row .group {
-      font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em;
-      color:var(--accent);
-    }
+    .skill-row .group { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:var(--accent); }
     .skill-items { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 9px; font-size:14px; color:var(--muted); }
     .skill-items .sep { color:var(--faint); opacity:.7; }
 
@@ -284,16 +312,25 @@
       .hero-grid, .two-col, .two-col.wide-left { grid-template-columns:1fr; gap:36px; }
       .hero-photo img { width:min(58%, 260px); }
       .work-grid { grid-template-columns:1fr; }
+      .cases { grid-template-columns:repeat(2,1fr); }
       .beyond-grid { grid-template-columns:repeat(2,1fr); }
-      .skill-row { grid-template-columns:1fr; gap:8px; }
-      .pub, .edu { grid-template-columns:1fr; gap:6px; }
-      .nav-links { display:none; }
+      .skill-row, .pub, .edu, .row-item { grid-template-columns:1fr; gap:8px; }
 
-      /* ...and single-column content is centred. Text centres by inheritance
-         from .sec; every flex row and fixed-width box needs saying explicitly. */
+      /* nav collapses behind a disclosure button */
+      .nav-toggle { display:flex; }
+      .nav-right { gap:12px; }
+      .nav-links {
+        display:none; position:absolute; top:100%; left:0; right:0;
+        flex-direction:column; gap:0; padding:6px 20px 14px;
+        background:var(--bg); border-bottom:1px solid var(--hair);
+      }
+      .nav-links[data-open="true"] { display:flex; }
+      .nav-links a { padding:11px 0; font-size:15px; }
+
+      /* section furniture centres... */
       .sec { text-align:center; }
-      .hero p,
-      .exp-panel p.sum,
+      .headline,
+      .hero p.about,
       .two-col > div > p { margin-left:auto; margin-right:auto; }
       .hero-ctas,
       .hero-social,
@@ -301,23 +338,34 @@
       .tags-sm,
       .work-links,
       .skill-items,
-      .exp-panel-head,
-      .exp-resp div,
-      .case-head,
-      .case-foot { justify-content:center; }
+      .exp-panel-head { justify-content:center; }
       .glyph { margin-left:auto; margin-right:auto; }
       .beyond-body,
       .certs div { align-items:center; }
       footer { justify-content:center; text-align:center; }
+
+      /* ...but prose stays left-aligned; centred paragraphs are hard to read.
+         The case cards are self-contained, so keep them left-aligned throughout. */
+      .exp-panel p.sum,
+      .exp-resp,
+      .exp-resp div,
+      .case, .case-body, .case-head, .case-block, .case-block p, .case-foot,
+      .work-body p,
+      .beyond-body p,
+      .row-item .desc { text-align:left; }
+      .case-foot { justify-content:space-between; }
+      .exp-panel p.sum { margin-left:0; margin-right:0; }
+      .exp-resp div { justify-content:flex-start; }
     }
     @media (max-width:560px) {
       .sec { padding:56px 20px; }
       .hero { padding-top:64px; }
       .nav-inner { padding:13px 20px; }
+      .nav-links { padding:6px 20px 14px; }
       .beyond-grid { grid-template-columns:1fr; }
-      .case { padding:24px; }
+      .cases { grid-template-columns:1fr; }
       .exp-panel { padding:24px; }
-      .hero p { font-size:17px; }
+      .hero h1, .headline, .hero p.about { font-size:17px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
@@ -326,18 +374,21 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand"><span class="dot"></span><span id="brand-name">Antonio O</span><span class="period">.</span></a>
+      <a href="#top" class="brand"><span class="dot"></span><span id="brand-name">Antonio Aureliano</span><span class="period">.</span></a>
       <div class="nav-right">
         <div class="nav-links" id="nav-links"></div>
-        <button type="button" class="theme-btn" id="theme-btn" aria-label="Toggle theme">☾</button>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+        <button type="button" class="theme-btn" id="theme-btn" aria-label="Switch to light theme">☾</button>
         <a href="#contact" class="cta">Contact</a>
       </div>
     </div>
   </nav>
 
-  <main id="app">
+  <main id="main">
     <p class="sec" id="boot" style="color:var(--muted)">Loading…</p>
   </main>
 
@@ -351,9 +402,13 @@
     function read(k)     { try { return localStorage.getItem(k); } catch (e) { return null; } }
     function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 
+    /* ---------- theme ---------- */
     var theme = root.getAttribute("data-theme") === "light" ? "light" : "dark";
     var themeBtn = document.getElementById("theme-btn");
-    function paintTheme() { themeBtn.textContent = theme === "dark" ? "☾" : "☀"; }
+    function paintTheme() {
+      themeBtn.textContent = theme === "dark" ? "☾" : "☀";
+      themeBtn.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+    }
     themeBtn.onclick = function () {
       theme = theme === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", theme);
@@ -361,6 +416,20 @@
       paintTheme();
     };
     paintTheme();
+
+    /* ---------- mobile menu ---------- */
+    var navToggle = document.getElementById("nav-toggle");
+    var navLinks  = document.getElementById("nav-links");
+    function setMenu(open) {
+      navLinks.setAttribute("data-open", open ? "true" : "false");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      navToggle.textContent = open ? "✕" : "☰";
+    }
+    navToggle.onclick = function () {
+      setMenu(navToggle.getAttribute("aria-expanded") !== "true");
+    };
+    setMenu(false);
 
     function esc(s) {
       return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -381,10 +450,7 @@
 
     fetch("portfolio.json", { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) {
-        data = d;
-        render();
-      })
+      .then(function (d) { data = d; render(); })
       .catch(function (e) {
         document.getElementById("boot").textContent =
           "Could not load portfolio.json (" + e.message + "). Run a local server.";
@@ -398,39 +464,14 @@
       return '<section class="sec hero" id="top"><div class="hero-grid">' +
         '<div class="hero-copy">' +
           '<div class="hero-eyebrow">' + esc(s.eyebrow) + "</div>" +
-          '<p id="about">' + esc(s.about) + "</p>" +
+          "<h1>" + esc(s.name) + "</h1>" +
+          (s.headline ? '<p class="headline">' + esc(s.headline) + "</p>" : "") +
+          '<p class="about" id="about">' + esc(s.about) + "</p>" +
           '<div class="hero-ctas"><a class="btn-fill" href="#work">View selected work</a>' + cv + "</div>" +
           '<div class="hero-social">' + social + "</div>" +
         "</div>" +
-        '<div class="hero-photo"><img src="' + esc(s.portrait) + '" alt="Antonio O" loading="lazy"></div>' +
+        '<div class="hero-photo"><img src="' + esc(s.portrait) + '" alt="' + esc(s.name) + '" loading="lazy"></div>' +
       "</div></section>";
-    }
-
-    function expHTML(list) {
-      if (!list || !list.length) return "";
-      var cards = list.map(function (e) {
-        var isOpen = openExp === e.id;
-        var card = '<button type="button" class="exp-card" data-exp="' + esc(e.id) + '" aria-expanded="' + isOpen + '">' +
-            '<span class="co">' + esc(e.company) + "</span>" +
-            '<span class="per">' + esc(e.period) + "</span>" +
-          "</button>";
-        if (!isOpen) return card;
-        var resp = (e.responsibilities || []).map(function (r) {
-          return '<div><span class="bullet">•</span><span>' + esc(r) + "</span></div>";
-        }).join("");
-        var panel = '<div class="exp-panel">' +
-            '<div class="exp-panel-head"><h3>' + esc(e.company) + "</h3>" +
-              '<span class="per">' + esc(e.period) + "</span></div>" +
-            '<div class="exp-role">' + esc(e.role) + "</div>" +
-            '<p class="sum">' + esc(e.summary) + "</p>" +
-            '<div class="exp-resp">' + resp + "</div>" +
-            '<div class="exp-tech"><div class="label">TECHNOLOGIES</div>' + pills(e.tech) + "</div>" +
-          "</div>";
-        return card + panel;
-      }).join("");
-      return '<section class="sec ruled" id="experience">' +
-        '<div class="eyebrow reveal">EXPERIENCE</div>' +
-        '<div class="exp-grid">' + cards + "</div></section>";
     }
 
     function workHTML(list) {
@@ -463,19 +504,67 @@
         var tags = (c.tech || []).length
           ? '<div class="tags-sm" style="margin:0">' + c.tech.map(function (t) { return '<span class="pill">' + esc(t) + "</span>"; }).join("") + "</div>"
           : "<span></span>";
+        function block(lbl, txt) {
+          return txt ? '<div class="case-block"><div class="label">' + lbl + '</div><p>' + esc(txt) + "</p></div>" : "";
+        }
         return '<div class="case">' + img +
-          '<div class="case-head"><span class="num">' + num + "</span><h3>" + esc(c.title) + "</h3></div>" +
-          '<div class="case-cols">' +
-            '<div><div class="label">CONTEXT &amp; PROBLEM</div><p>' + esc(c.problem) + "</p></div>" +
-            '<div><div class="label">APPROACH</div><p>' + esc(c.approach) + "</p></div>" +
-            '<div><div class="label">OUTCOME</div><p>' + esc(c.outcome) + "</p></div>" +
+          '<div class="case-body">' +
+            '<div class="case-head"><span class="num">' + num + "</span><h3>" + esc(c.title) + "</h3></div>" +
+            block("CONTEXT &amp; PROBLEM", c.problem) +
+            block("APPROACH", c.approach) +
+            block("OUTCOME", c.outcome) +
+            '<div class="case-foot">' + tags + link + "</div>" +
           "</div>" +
-          '<div class="case-foot">' + tags + link + "</div>" +
         "</div>";
       }).join("");
       return '<section class="sec ruled" id="cases">' +
         '<div class="eyebrow gap reveal">CASE STUDIES</div>' +
         '<div class="cases">' + items + "</div></section>";
+    }
+
+    function writingHTML(list) {
+      if (!list || !list.length) return "";
+      var rows = list.map(function (w) {
+        return '<div class="row-item">' +
+          '<span class="kind">' + esc(w.kind || "") + "</span>" +
+          '<div><div class="title">' + esc(w.title) + "</div>" +
+            (w.desc ? '<div class="desc">' + esc(w.desc) + "</div>" : "") + "</div>" +
+          (w.link ? extLink(w.link, w.linkLabel || "Open") : "<span></span>") +
+        "</div>";
+      }).join("");
+      return '<section class="sec ruled" id="writing">' +
+        '<div class="eyebrow reveal">WRITING &amp; TALKS</div>' +
+        '<div class="rows">' + rows + "</div></section>";
+    }
+
+    function expHTML(list) {
+      if (!list || !list.length) return "";
+      var cards = list.map(function (e) {
+        var isOpen = openExp === e.id;
+        var btnId = "exp-btn-" + e.id;
+        var panelId = "exp-panel-" + e.id;
+        var card = '<button type="button" class="exp-card" id="' + btnId + '" data-exp="' + esc(e.id) + '"' +
+            ' aria-expanded="' + isOpen + '" aria-controls="' + panelId + '">' +
+            '<span class="co">' + esc(e.company) + "</span>" +
+            '<span class="per">' + esc(e.period) + "</span>" +
+          "</button>";
+        if (!isOpen) return card;
+        var resp = (e.responsibilities || []).map(function (r) {
+          return '<div><span class="bullet">•</span><span>' + esc(r) + "</span></div>";
+        }).join("");
+        var panel = '<div class="exp-panel" id="' + panelId + '" role="region" aria-labelledby="' + btnId + '">' +
+            '<div class="exp-panel-head"><h3>' + esc(e.company) + "</h3>" +
+              '<span class="per">' + esc(e.period) + "</span></div>" +
+            '<div class="exp-role">' + esc(e.role) + "</div>" +
+            '<p class="sum">' + esc(e.summary) + "</p>" +
+            '<div class="exp-resp">' + resp + "</div>" +
+            '<div class="exp-tech"><div class="label">TECHNOLOGIES</div>' + pills(e.tech) + "</div>" +
+          "</div>";
+        return card + panel;
+      }).join("");
+      return '<section class="sec ruled" id="experience">' +
+        '<div class="eyebrow reveal">EXPERIENCE</div>' +
+        '<div class="exp-grid">' + cards + "</div></section>";
     }
 
     function researchHTML(r) {
@@ -559,26 +648,36 @@
 
     function render() {
       var s = data.site || {};
-      document.title = s.name + " — QA, Data Quality & AI";
+      document.title = s.name + (s.headline ? " — " + s.headline : "");
       document.getElementById("brand-name").textContent = s.name || "";
       document.getElementById("foot-left").textContent = "© " + new Date().getFullYear() + " " + (s.name || "");
 
       var nav = [];
       if ((data.work || []).length)       nav.push(["#work", "Work"]);
+      if ((data.cases || []).length)      nav.push(["#cases", "Case studies"]);
       if ((data.experience || []).length) nav.push(["#experience", "Experience"]);
+      if ((data.writing || []).length)    nav.push(["#writing", "Writing"]);
       if (data.research && (data.research.pubs || []).length) nav.push(["#research", "Research"]);
+      nav.push(["https://github.com/antonioaurel/antonioaurel.github.io/tree/main/books", "Books"]);
       nav.push(["#about", "About"]);
-      document.getElementById("nav-links").innerHTML = nav.map(function (n) {
-        return '<a href="' + n[0] + '">' + n[1] + "</a>";
+      nav.sort(function (a, b) { return a[1].localeCompare(b[1]); });
+      navLinks.innerHTML = nav.map(function (n) {
+        var ext = n[0].indexOf("http") === 0;
+        return '<a href="' + n[0] + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + n[1] + "</a>";
       }).join("");
+      Array.prototype.forEach.call(navLinks.querySelectorAll("a"), function (a) {
+        a.onclick = function () { setMenu(false); };
+      });
 
-      document.getElementById("app").innerHTML =
+      /* projects lead; the career timeline follows; writing sits after skills */
+      document.getElementById("main").innerHTML =
         heroHTML(s) +
-        expHTML(data.experience) +
         workHTML(data.work) +
         casesHTML(data.cases) +
-        researchHTML(data.research) +
+        expHTML(data.experience) +
         skillsHTML(data.skills) +
+        writingHTML(data.writing) +
+        researchHTML(data.research) +
         eduHTML(data.education, data.certs) +
         beyondHTML(data.beyond) +
         contactHTML(s);

@@ -1,11 +1,12 @@
 {
   "site": {
-    "name": "Antonio O",
+    "name": "Antonio Aureliano",
+    "headline": "Senior Quality Engineer specializing in Software, Data and AI Systems",
     "eyebrow": "QA · DATA QUALITY · AI · RESEARCH",
-    "about": "Senior QA, Data Quality Engineer, and AI researcher. I bridge software quality, data validation, and applied AI to help teams build reliable products and make decisions they can trust.",
+    "about": "I design quality strategies for web, mobile, data and AI-powered products. My work combines risk-based testing, automation, data validation and LLM evaluation to help teams release reliable products and make decisions they can trust.",
     "cv": "cv/AntonioOliveiraCV_QA-.pdf",
     "portrait": "image/tom-profile.jpeg",
-    "contactIntro": "Open to QA, LLM quality, and data-quality roles, and AI engineering work — ping me.",
+    "contactIntro": "Open to QA, LLM quality, and data-quality roles, and AI engineering work, let's connect.",
     "social": [
       { "label": "LinkedIn", "url": "https://www.linkedin.com/in/aspo/" },
       { "label": "GitHub",   "url": "https://github.com/antonioaurel" },
@@ -96,15 +97,31 @@
 
   "work": [
     {
-      "title": "Quality Assurance in Practice",
-      "img": "image/quality-assurance.jpeg",
-      "desc": "A shared look at how I approach quality assurance day-to-day — strategy, risk, and the mindset behind trustworthy releases.",
-      "problem": "Communicating what modern QA really involves",
-      "tech": ["QA", "Test strategy", "Risk-based testing"],
-      "links": [{ "label": "View post", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7334527423150972928/" }]
+      "title": "Quality Validation Process",
+      "img": "image/qa-workflow.png",
+      "desc": "My end-to-end QA validation workflow: story validation, cycle execution, issue verification and regression feedback, with risk-based bug prioritization and an AI-supported automation strategy.",
+      "problem": "A repeatable, tool-agnostic path from story to shipped quality",
+      "tech": ["Test strategy", "Risk-based testing", "Regression", "Automation"],
+      "links": [
+        { "label": "View the workflow", "url": "https://antonioaurel.github.io/QA/qa-process/" },
+        { "label": "GitHub", "url": "https://github.com/antonioaurel/QA" }
+      ]
     },
     {
-      "title": "Functional Testing Automation",
+      "title": "Recife History Connections: Data Quality and Interactive Visualization",
+      "img": "image/conexoes.png",
+      "desc": "An interactive data-visualization exploring the historical connections and cultural heritage of Recife, my hometown, turning scattered archival records into an explorable, narrative-driven experience.",
+      "problem": "Making fragmented historical data explorable and meaningful",
+      "tech": ["Data visualization", "JavaScript", "Open data", "Storytelling"],
+      "links": [
+        { "label": "Live Demo", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/en/index.html" },
+        { "label": "Dashboard", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
+        { "label": "GitHub", "url": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" },
+        { "label": "Matrix", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/Quality/modules-features-matrix/matrix.html" }
+      ]
+    },
+    {
+      "title": "Playwright Test Architecture: UI, API, Database and CI",
       "img": "https://playwrightsolutions.com/content/images/2024/05/image-16.png",
       "shot": "e2e automation · code",
       "desc": "A study and reference implementation of end-to-end UI automation patterns using Playwright, designed for reliability and ease of maintenance.",
@@ -113,19 +130,7 @@
       "links": [{ "label": "GitHub", "url": "https://github.com/antonioaurel/playwright-study" }]
     },
     {
-      "title": "Data Visualization",
-      "img": "image/conexoes.png",
-      "desc": "An interactive data-visualization exploring the historical connections and cultural heritage of Recife, my town, turning scattered archival records into an explorable, narrative-driven experience.",
-      "problem": "Making fragmented historical data explorable and meaningful",
-      "tech": ["Data visualization", "JavaScript", "Open data", "Storytelling"],
-      "links": [
-        { "label": "Live Demo", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/en/index.html" },
-        { "label": "Dashboard", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
-        { "label": "GitHub", "url": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" }
-      ]
-    },
-    {
-      "title": "Cross-Functional Testing Automation",
+      "title": "Performance and Load Testing with k6",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsS6bLR08jhV9k9NpgIvnyvt_tdP-9OhH505O_S4rEMg&s=10",
       "shot": "load testing · results",
       "desc": "Performance test variations built and combined with k6 to explore how systems behave under different load profiles.",
@@ -135,13 +140,85 @@
     }
   ],
 
+  "writing": [
+    {
+      "kind": "POST",
+      "title": "Quality Assurance in Practice",
+      "desc": "A shared look at how I approach quality assurance day-to-day, strategy, risk, and the mindset behind trustworthy releases.",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7334527423150972928/",
+      "linkLabel": "View post"
+    },
+    {
+      "kind": "TALK",
+      "title": "Trackeando a movimentação cultural, econômica e social de uma Troça Carnavalesca",
+      "desc": "XConf Brasil 2022, measuring the economic chain a street carnival troça sets in motion.",
+      "link": "https://www.youtube.com/watch?v=FBczVOE7grQ",
+      "linkLabel": "Watch the talk"
+    },
+    {
+      "kind": "POST",
+      "title": "IA > DEV: Still NO (yearly review)",
+      "desc": "A yearly-review revisit of why AI accelerates development but won't replace software engineers.",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7310692904962818048/",
+      "linkLabel": "View post"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "Validation Biases and their types: one of the new pillars of Software Quality, and its best friend, Data",
+      "desc": "Surface bias, deep bias and algorithmic defenses in LLM responses, and why data is quality's new best friend.",
+      "link": "https://antonio-aureliano.medium.com/validation-biases-and-their-types-one-of-the-new-pillars-of-software-quality-and-its-best-friend-6e95a8dba8c0",
+      "linkLabel": "Read"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "Try and Catch: A decision matrix",
+      "desc": "A decision matrix for when to use try/catch in Playwright test automation, weighing cost against benefit.",
+      "link": "https://antonio-aureliano.medium.com/try-and-catch-a-decision-matrix-50f7bf199ed4",
+      "linkLabel": "Read"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "The Mula sem Cabeça Problem: What LLMs Miss Without Semantic Definitions",
+      "desc": "Testing what an LLM misses without semantic definitions, using a Brazilian literary classic.",
+      "link": "https://antonio-aureliano.medium.com/why-is-a-data-dictionary-still-imported-from-an-llm-and-why-call-it-tuning-16023976dbd0",
+      "linkLabel": "Read"
+    },
+    {
+      "kind": "ARTICLE",
+      "title": "O Homem da Meia Noite. O Calunga da Cidade Eterna",
+      "desc": "The history of a 1931 Olinda carnival club that opens Pernambuco's carnival.",
+      "link": "https://antonio-aureliano.medium.com/o-homem-da-meia-noite-o-calunga-da-cidade-eterna-c536085d3110",
+      "linkLabel": "Read"
+    }
+  ],
+
   "cases": [
+    {
+      "title": "Data Dictionaries and LLMs: Context, Not Fine-Tuning",
+      "img": "image/saci.png",
+      "problem": "LLMs can read structured data, but column names rarely capture business meaning, relationships, valid values or operational rules. Without that context, models may misread fields, generate invalid queries or return confident but inaccurate conclusions.",
+      "approach": "Used a data dictionary to supply field definitions, formats, relationships, constraints and business rules. The post also separates this contextual adaptation from fine-tuning, which requires additional training and changes to the model's learned parameters.",
+      "outcome": "A shared layer between business knowledge, data structures and the LLM. The dictionary improves query accuracy, reduces hallucinated fields and keeps analysis within the dataset's real rules, vocabulary and boundaries.",
+      "tech": ["LLM", "Data dictionary", "Prompt tuning", "Data quality"],
+      "link": "https://antonio-aureliano.medium.com/why-is-a-data-dictionary-still-imported-from-an-llm-and-why-call-it-tuning-16023976dbd0",
+      "linkLabel": "Read the post"
+    },
+    {
+      "title": "Bug & hotfix QA process: a branch map",
+      "img": "image/bug-fix-process.png",
+      "problem": "A save-freeze bug on the live build of a gallery app needed a fast, disciplined path from report to fix without destabilising the next release.",
+      "approach": "Modelled the whole bug/hotfix flow as a git-style branch map: fork off master, run the triage lane (log and evidence, risk and dependency matrix, analytics-ranked priority), reproduce and fix, then merge back through QA retest, regression sweep and automation.",
+      "outcome": "A repeatable process where every ticket resolves into one of five documented outcomes: fixed, not reproducible, won't fix, duplicate or invalid. A clean fix feeds back as new test scenarios, so each build ships sturdier than the last.",
+      "tech": ["QA process", "Triage", "Regression", "Automation"],
+      "link": "https://antonioaurel.github.io/QA/bug-hotfix-qa-process/",
+      "linkLabel": "View the branch map"
+    },
     {
       "title": "Data quality for history connections",
       "img": "image/data-quality.png",
       "problem": "Recife's historical records were scattered across inconsistent sources, duplicated names, conflicting dates, and messy formats that made any analysis unreliable.",
       "approach": "Built a data-cleaning and storytelling pipeline: profiling the raw records, defining validation rules, de-duplicating entities, and documenting every transformation so the process stayed transparent and reproducible.",
-      "outcome": "A trustworthy, structured dataset that powers the Recife History Connections visualization — and a narrative that shows the cleaning decisions behind it.",
+      "outcome": "A trustworthy, structured dataset that powers the Recife History Connections visualization, and a narrative that shows the cleaning decisions behind it.",
       "tech": ["Data cleaning", "Validation", "Storytelling", "Open data"],
       "link": "https://antonioaurel.github.io/data/projects/historical-base-cleaning/data-cleaning-story-telling.html#1"
     },
@@ -163,24 +240,46 @@
     {
       "title": "Tracking Economic Impacts of a Carnival Bloco",
       "img": "image/map-tonho.png",
-      "problem": "The cultural, economic and social footprint of a street carnival troça is felt by everyone around it but never actually measured, so its value to the neighbourhood stays anecdotal.",
-      "approach": "Modeled the movement of a carnival bloco with my own troça, \"Segura o Tonho\", as the case study. Integrated open data from Recife City Hall (orquestra schedules and payment values), Map of Frevo — a personal project cataloguing where and when blocos play — shirt-sales spreadsheets, and direct interviews with service providers and workers. Processed with Python and pandas and georeferenced through Google Maps, framing the economic chain around three pillars: infrastructure and services, the troça's public, and the people working within it.",
-      "outcome": "A proof of concept that turns the fluid nature of carnival into actionable insight. A troça of 300 people generates roughly R$ 9,500 in beverages and transport alone, benefiting around 50 people across multiple neighbourhoods, with supplies drawn from a ~10km radius — impact reaching well beyond the parade route. Tracking where workers spend their earnings (one percussionist returned R$ 1,300 of his R$ 2,700 into his own community, Brasília Teimosa) shows how data can evidence the role of cultural events in circulating local wealth.",
+      "problem": "A street carnival troça creates cultural, social and economic value, but its impact is rarely measured. Without data, its contribution to local businesses, workers and neighbourhoods remains largely anecdotal.",
+      "approach": "Used my own troça, Segura o Tonho, as a case study. Combined Recife City Hall data, Map of Frevo records, shirt sales, interviews and geolocation analysis with Python and pandas to map services, audiences, workers and the local economic chain.",
+      "outcome": "A proof of concept showing how carnival circulates wealth beyond the parade route. A troça of 300 people generated about R$9,500 in beverages and transport, benefited roughly 50 workers and connected suppliers and communities across a 10km radius.",
       "tech": ["Python", "pandas", "Google Maps", "Open data", "Georeferencing"],
-      "link": "https://www.youtube.com/watch?v=FBczVOE7grQ",
+      "link": "https://youtu.be/FBczVOE7grQ?t=51",
       "linkLabel": "Watch the talk"
+    },
+    {
+      "title": "World Cup 2026: The Reality of the Numbers vs. Memory",
+      "img": "image/world-cup.png",
+      "problem": "After Brazil's 1–1 draw with Morocco, many fans felt the team had been completely overwhelmed. The post questions whether Morocco's intense opening pressure distorted how the entire match was remembered.",
+      "approach": "Reanalysed possession, shots, passes, positioning and the match timeline using SofaScore, FIFA and other football-data sources. AI supported data extraction, visualisation and cross-checking, followed by manual validation.",
+      "outcome": "Morocco clearly controlled the opening 20 minutes, reaching around 65% possession, but Brazil recovered before the half-hour mark and balanced much of the remaining game. The performance was not brilliant, but it was far more competitive than the post-match perception suggested.",
+      "tech": ["Data analysis", "SofaScore", "FIFA data", "AI"],
+      "link": "https://antonio-aureliano.medium.com/world-cup-2026-the-reality-of-the-numbers-vs-9b8b2a654b64",
+      "linkLabel": "Read the post"
+    },
+    {
+      "title": "Traceability Matrix: risk-based test prioritization",
+      "img": "image/trace.png",
+      "problem": "One app with many parts that quietly share data, code, components and state, so a small change can break something several screens away. Testing everything is too slow, and testing the wrong things misses real defects.",
+      "approach": "Built a modules-and-features traceability matrix: inventory every subsystem, module and feature, record what each one shares with others, and count the most-shared hubs. Every pull request is traced back to the exact features its diff touched.",
+      "outcome": "Test effort follows risk instead of guesswork, the biggest blast-radius resources get tested first, and every feature stays accounted for. Less regression testing, caught earlier, with reasoning anyone can follow.",
+      "tech": ["Traceability", "Risk-based testing", "Impact analysis", "QA"],
+      "link": "https://antonioaurel.github.io/QA/impact-track/",
+      "linkLabel": "Read the story"
     }
   ],
 
   "skills": [
-    { "group": "QUALITY ASSURANCE", "items": ["Test strategy", "Risk-Driven", "Impact Tracking", "Dependencies", "Quality gates"] },
-    { "group": "AUTOMATION",        "items": ["Playwright", "Selenium", "REST Assured", "CI/CD"] },
-    { "group": "DATA & ANALYTICS",  "items": ["SQL", "Airflow", "pandas", "Analytics", "Crashlytics"] },
-    { "group": "AI / ML",           "items": ["PyTorch", "LLMs", "scikit-learn", "Evaluation design"] },
-    { "group": "PROGRAMMING",       "items": ["Python", "TypeScript", "SQL"] },
-    { "group": "CLOUD & INFRA",     "items": ["Docker", "GitHub Actions"] },
-    { "group": "METHODS",           "items": ["Agile", "TDD", "DDD", "BDD", "Root-cause analysis"] },
-    { "group": "SOFT SKILLS",       "items": ["Stakeholder communication", "Mentoring", "EN / ES / PT"] }
+    { "group": "QUALITY ASSURANCE",     "items": ["Test strategy", "Risk-based testing", "Change impact analysis", "Dependency analysis", "Quality gates"] },
+    { "group": "TEST AUTOMATION & QA",  "items": ["Playwright", "Selenium", "Cucumber", "REST Assured", "Postman", "Thunder Client", "BrowserStack"] },
+    { "group": "PERFORMANCE & LOAD",    "items": ["k6", "JMeter", "Artillery"] },
+    { "group": "PROGRAMMING",           "items": ["Python", "JavaScript", "TypeScript", "SQL", "REST API"] },
+    { "group": "DATA & ANALYTICS",      "items": ["SQL", "Airflow", "pandas", "Analytics", "Crashlytics"] },
+    { "group": "AI / ML",               "items": ["PyTorch", "LLMs", "scikit-learn", "Evaluation design"] },
+    { "group": "CI/CD & INFRA",         "items": ["Docker", "Git", "GitHub Actions", "GitLab", "Jenkins", "CI/CD"] },
+    { "group": "PLATFORMS & COLLAB",    "items": ["Jira", "Confluence", "Azure DevOps"] },
+    { "group": "METHODS",               "items": ["Agile", "TDD", "DDD", "BDD", "Root-cause analysis"] },
+    { "group": "SOFT SKILLS",           "items": ["Active listening", "Collaboration", "Critical thinking", "Cultural awareness", "Mentoring", "Problem-solving"] }
   ],
 
   "beyond": [
@@ -207,7 +306,7 @@
     {
       "tag": "≈",
       "title": "Wind & water",
-      "desc": "Sailing man with a few miles to go. Teamwork, reading conditions, adjusting constantly, and staying calm under changing pressure.",
+      "desc": "A sailor still learning with every mile. Teamwork, reading conditions, adjusting constantly, and staying calm under changing pressure.",
       "img": "image/saiing.jpg"
     }
   ],
