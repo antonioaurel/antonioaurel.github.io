@@ -311,7 +311,30 @@
     }
   ],
 
-  "education": [],
+  "education": [
+    {
+      "period": "IN PROGRESS",
+      "degree": "Doctor of Science, Machine Learning and Big Data",
+      "school": "CESAR School",
+      "note": "Research on identifying and mining dark data in system logs to support early detection and prevention of software system failures."
+    },
+    {
+      "period": "",
+      "degree": "Master's Degree, Software Engineering",
+      "school": "CESAR School",
+      "note": "Developed a conceptual system predicting attendance at in-person events using interaction metrics from Facebook Event pages."
+    },
+    {
+      "period": "",
+      "degree": "Information Technology, Management",
+      "school": "Federal University of Pernambuco (UFPE)"
+    },
+    {
+      "period": "",
+      "degree": "Bachelor's Degree, Computer Systems Analysis",
+      "school": "Universidade Salgado de Oliveira"
+    }
+  ],
   "certs": [],
   "research": null
 }
