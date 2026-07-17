@@ -18,7 +18,10 @@
     { "label": { "en": "Data",        "pt": "Dados" },        "tag": "data" },
     { "label": { "en": "AI",          "pt": "IA" },           "tag": "ai" },
     { "label": { "en": "Culture",     "pt": "Cultura" },      "tag": "culture" },
-    { "label": { "en": "Coding",      "pt": "Código" },       "tag": "coding" }
+    { "label": { "en": "Coding",      "pt": "Código" },       "tag": "coding" },
+    { "label": { "en": "Data visualization", "pt": "Visualização de dados" }, "tag": "visualization" },
+    { "label": { "en": "Data quality",       "pt": "Qualidade de dados" },    "tag": "quality" },
+    { "label": { "en": "Pipeline",           "pt": "Pipeline" },              "tag": "pipeline" }
   ],
   "sections": [
     {
@@ -26,22 +29,39 @@
       "projects": [
         {
           "title": "Conexões da História",
-          "type": { "en": "Data visualization", "pt": "Visualização de dados" },
           "status": "live",
-          "summary": { "en": "Interactive graph of Recife's historical connections.", "pt": "Grafo interativo das conexões históricas do Recife." },
-          "tags": ["data", "live"],
+          "summary": {
+            "en": "A mapping of the connections between people, places and events in the history of Pernambuco at points that influenced Brazil.",
+            "pt": "Um mapeamento das conexões entre pessoas, locais e eventos da história de Pernambuco em pontos que influenciaram o Brasil."
+          },
+          "labels": [
+            { "en": "Data visualization", "pt": "Visualização de dados" },
+            { "en": "Data quality", "pt": "Qualidade de dados" },
+            { "en": "Pipeline", "pt": "Pipeline" }
+          ],
+          "tags": ["data", "live", "visualization", "quality", "pipeline"],
           "links": [
-            { "platform": "web",       "href": "https://conexoesdahistoria.com" },
+            { "platform": "open",      "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/index.html" },
             { "platform": "github",    "href": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" },
             { "platform": "instagram", "href": "https://instagram.com/conexoesdahistoria" }
-          ]
+          ],
+          "resources": {
+            "title": { "en": "Documentation & dashboards", "pt": "Documentação e dashboards" },
+            "items": [
+              { "label": "Architecture", "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/docs/architecture.html", "soon": true },
+              { "label": "Monitoring Dashboard", "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
+              { "label": "Modules & Features", "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/Quality/modules-features-matrix/matrix.html" },
+              { "label": "PR Impact", "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/Quality/modules-features-matrix/pr-impact.html" },
+              { "label": "ChatGPT Review", "href": "https://antonioaurel.github.io/data/projects/recife-history-connections/docs/documentation-review-chatgpt-claude.html" }
+            ]
+          }
         },
         {
           "title": { "en": "Historical base cleaning", "pt": "Limpeza da base histórica" },
           "type": { "en": "Data quality", "pt": "Qualidade de dados" },
           "status": "wip",
           "summary": { "en": "Validation and fill-rate monitoring of the base.", "pt": "Validação e monitoramento de preenchimento da base." },
-          "tags": ["data", "wip"],
+          "tags": ["data", "wip", "quality"],
           "links": [
             { "platform": "github", "href": "https://github.com/antonioaurel/data/tree/main/projects/historical-base-cleaning" }
           ]
