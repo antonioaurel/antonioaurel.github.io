@@ -238,7 +238,7 @@
       "tech": ["Prediction", "Machine learning", "Data", "Concept", "Data Quality", "Software Quality", "Python"],
       "links": [
         { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/presentation/", "label": "Read the full case study" },
-        { "url": "https://github.com/antonioaurel/data/tree/event-attendance-prediction/projects/event-attendance-prediction", "label": "Github" },
+        { "url": "https://github.com/antonioaurel/data/tree/main/projects/event-attendance-prediction", "label": "Github" },
         { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/app/", "label": "System" },
         { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/reports/", "label": "Reports" },
         { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/app/glossary.html", "label": "Glossary" }
