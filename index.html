@@ -235,6 +235,7 @@
     }
     .case-foot a { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); text-decoration:none; }
     .case-foot a:hover { text-decoration:underline; }
+    .case-links { display:flex; flex-wrap:wrap; gap:6px 14px; }
 
     /* ---------- writing & talks ---------- */
     .rows { display:flex; flex-direction:column; }
@@ -512,7 +513,8 @@
       var items = list.map(function (c, i) {
         var num = String(i + 1).padStart(2, "0");
         var img = c.img ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy">' : "";
-        var link = (c.link && c.link !== "#") ? extLink(c.link, c.linkLabel || "Read full case study") : "";
+        var links = (c.links || []).map(function (l) { return extLink(l.url, l.label); }).join("");
+        if (!links && c.link && c.link !== "#") links = extLink(c.link, c.linkLabel || "Read full case study");
         var tags = (c.tech || []).length
           ? '<div class="tags-sm" style="margin:0">' + c.tech.map(function (t) { return '<span class="pill">' + esc(t) + "</span>"; }).join("") + "</div>"
           : "<span></span>";
@@ -525,7 +527,7 @@
             block("CONTEXT &amp; PROBLEM", c.problem) +
             block("APPROACH", c.approach) +
             block("OUTCOME", c.outcome) +
-            '<div class="case-foot">' + tags + link + "</div>" +
+            '<div class="case-foot">' + tags + '<div class="case-links">' + links + "</div></div>" +
           "</div>" +
         "</div>";
       }).join("");

@@ -231,11 +231,18 @@
     },
     {
       "title": "Predictive Presence System Concept",
+      "img": "image/EVE%20System%20Diagram-selection.png",
       "problem": "Events struggled to anticipate attendance, making staffing, space, and resource planning a guess.",
       "approach": "Designed a concept that models historical attendance signals and event attributes to predict turnout, framing it as a decision-support tool rather than a black box.",
       "outcome": "A working proof-of-concept for event-attendance prediction that shows how data can turn planning from reactive to proactive.",
-      "tech": ["Prediction", "Machine learning", "Data", "Concept"],
-      "link": "https://github.com/antonioaurel/data/tree/main/projects/event-attendance-prediction"
+      "tech": ["Prediction", "Machine learning", "Data", "Concept", "Data Quality", "Software Quality", "Python"],
+      "links": [
+        { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/presentation/", "label": "Read the full case study" },
+        { "url": "https://github.com/antonioaurel/data/tree/event-attendance-prediction/projects/event-attendance-prediction", "label": "Github" },
+        { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/app/", "label": "System" },
+        { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/reports/", "label": "Reports" },
+        { "url": "https://antonioaurel.github.io/data/projects/event-attendance-prediction/app/glossary.html", "label": "Glossary" }
+      ]
     },
     {
       "title": "Tracking Economic Impacts of a Carnival Bloco",
