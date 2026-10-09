@@ -97,6 +97,19 @@
 
   "work": [
     {
+      "title": "Recife History Connections: Data Quality and Interactive Visualization",
+      "img": "image/conexoes.png",
+      "desc": "An interactive data-visualization exploring the historical connections and cultural heritage of Recife, my hometown, turning scattered archival records into an explorable, narrative-driven experience.",
+      "problem": "Making fragmented historical data explorable and meaningful",
+      "tech": ["Data visualization", "JavaScript", "Open data", "Storytelling"],
+      "links": [
+        { "label": "Live Demo", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/en/index.html" },
+        { "label": "Dashboard", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
+        { "label": "GitHub", "url": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" },
+        { "label": "Matrix", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/Quality/modules-features-matrix/matrix.html" }
+      ]
+    },
+    {
       "title": "Brazilian Congress by Ideological Spectrum, 1990–2026",
       "img": "image/brazilian-congress.png",
       "desc": "A bilingual (EN/PT) data site charting how the Chamber of Deputies and the Senate split across seven ideological families, from far left to far right, nationally and per state, alongside the social and economic indicators usually used to explain the shifts.",
@@ -118,19 +131,6 @@
       "links": [
         { "label": "View the workflow", "url": "https://antonioaurel.github.io/QA/qa-process/" },
         { "label": "GitHub", "url": "https://github.com/antonioaurel/QA" }
-      ]
-    },
-    {
-      "title": "Recife History Connections: Data Quality and Interactive Visualization",
-      "img": "image/conexoes.png",
-      "desc": "An interactive data-visualization exploring the historical connections and cultural heritage of Recife, my hometown, turning scattered archival records into an explorable, narrative-driven experience.",
-      "problem": "Making fragmented historical data explorable and meaningful",
-      "tech": ["Data visualization", "JavaScript", "Open data", "Storytelling"],
-      "links": [
-        { "label": "Live Demo", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/pages/en/index.html" },
-        { "label": "Dashboard", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/dashboard/dashboard.html" },
-        { "label": "GitHub", "url": "https://github.com/antonioaurel/data/tree/main/projects/recife-history-connections" },
-        { "label": "Matrix", "url": "https://antonioaurel.github.io/data/projects/recife-history-connections/Quality/modules-features-matrix/matrix.html" }
       ]
     },
     {
