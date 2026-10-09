@@ -97,6 +97,19 @@
 
   "work": [
     {
+      "title": "Brazilian Congress by Ideological Spectrum, 1990–2026",
+      "img": "image/brazilian-congress.png",
+      "desc": "A bilingual (EN/PT) data site charting how the Chamber of Deputies and the Senate split across seven ideological families, from far left to far right, nationally and per state, alongside the social and economic indicators usually used to explain the shifts.",
+      "problem": "Turning scattered electoral records into a traceable, comparable view of Brazil's political shift",
+      "tech": ["Python", "Chart.js", "Open data", "Data visualization", "Data quality"],
+      "links": [
+        { "label": "Live Demo", "url": "https://antonioaurel.github.io/statics-brazilian-congress/" },
+        { "label": "Politicians", "url": "https://antonioaurel.github.io/statics-brazilian-congress/politicians.html" },
+        { "label": "Methodology", "url": "https://antonioaurel.github.io/statics-brazilian-congress/methodology.html" },
+        { "label": "GitHub", "url": "https://github.com/antonioaurel/statics-brazilian-congress" }
+      ]
+    },
+    {
       "title": "Quality Validation Process",
       "img": "image/qa-workflow.png",
       "desc": "My end-to-end QA validation workflow: story validation, cycle execution, issue verification and regression feedback, with risk-based bug prioritization and an AI-supported automation strategy.",
