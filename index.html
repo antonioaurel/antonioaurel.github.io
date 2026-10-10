@@ -154,6 +154,7 @@
     .hero-social { display:flex; flex-wrap:wrap; gap:22px; font-family:'JetBrains Mono',monospace; font-size:12.5px; }
     .hero-social a { color:var(--muted); text-decoration:none; transition:color .12s; }
     .hero-social a:hover { color:var(--accent); }
+    .hero-social + .hero-social { margin-top:12px; }
     .hero-photo { animation:rise .9s cubic-bezier(.16,1,.3,1) .1s both; }
     .hero-photo img {
       width:70%; aspect-ratio:4/5; object-fit:cover; object-position:50% 18%;
@@ -191,7 +192,9 @@
     .exp-tech { margin-top:26px; padding-top:22px; border-top:1px solid var(--hair); }
 
     /* ---------- work ---------- */
-    .work-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .work-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+    .work-col { display:flex; flex-direction:column; gap:22px; }
+    .work-col .label { margin-bottom:-8px; }
     .work-card {
       border:1px solid var(--border); border-radius:16px; background:var(--card);
       overflow:hidden; display:flex; flex-direction:column; transition:border-color .12s;
@@ -396,7 +399,8 @@
         <div class="nav-links" id="nav-links"></div>
         <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
         <button type="button" class="theme-btn" id="theme-btn" aria-label="Switch to light theme">☾</button>
-        <a href="#contact" class="cta">Contact</a>
+        <!-- LinkedIn has no URL for a pre-filled message to a profile, so this opens the profile, where "Message" is one click away -->
+        <a href="https://www.linkedin.com/in/aspo/" class="cta" target="_blank" rel="noopener">Contact</a>
       </div>
     </div>
   </nav>
@@ -473,15 +477,15 @@
 
     function heroHTML(s) {
       var social = (s.social || []).map(function (l) { return extLink(l.url, l.label); }).join("");
-      var cv = s.cv ? '<a class="btn-outline" href="' + esc(s.cv) + '" target="_blank" rel="noopener" download>Download CV</a>' : "";
+      var cv = s.cv ? '<div class="hero-social"><a href="' + esc(s.cv) + '" target="_blank" rel="noopener" download>Download CV ↓</a></div>' : "";
       return '<section class="sec hero" id="top"><div class="hero-grid">' +
         '<div class="hero-copy">' +
           '<div class="hero-eyebrow">' + esc(s.eyebrow) + "</div>" +
           "<h1>" + esc(s.name) + "</h1>" +
           (s.headline ? '<p class="headline">' + esc(s.headline) + "</p>" : "") +
           '<p class="about" id="about">' + esc(s.about) + "</p>" +
-          '<div class="hero-ctas"><a class="btn-fill" href="#work">View selected work</a>' + cv + "</div>" +
-          '<div class="hero-social">' + social + "</div>" +
+          '<div class="hero-ctas"><a class="btn-fill" href="#work">View selected work</a></div>' +
+          '<div class="hero-social">' + social + "</div>" + cv +
         "</div>" +
         '<div class="hero-photo"><img src="' + esc(s.portrait) + '" alt="' + esc(s.name) + '" loading="lazy"></div>' +
       "</div></section>";
@@ -489,7 +493,7 @@
 
     function workHTML(list) {
       if (!list || !list.length) return "";
-      var cards = list.map(function (p) {
+      function card(p) {
         var media = p.img
           ? '<img src="' + esc(p.img) + '" alt="' + esc(p.title) + '" loading="lazy">'
           : '<div class="shot"><span>' + esc(p.shot || "") + "</span></div>";
@@ -502,10 +506,15 @@
             '<div class="tags-sm">' + (p.tech || []).map(function (t) { return '<span class="pill">' + esc(t) + "</span>"; }).join("") + "</div>" +
             '<div class="work-links">' + links + "</div>" +
           "</div></div>";
-      }).join("");
+      }
+      /* two columns: data / AI on the left, QA on the right */
+      function col(group, label) {
+        var cards = list.filter(function (p) { return p.group === group; }).map(card).join("");
+        return cards ? '<div class="work-col"><div class="label">' + label + "</div>" + cards + "</div>" : "";
+      }
       return '<section class="sec ruled" id="work">' +
         '<div class="eyebrow reveal">SELECTED WORK</div>' +
-        '<div class="work-grid">' + cards + "</div></section>";
+        '<div class="work-grid">' + col("data", "DATA / AI") + col("qa", "QA") + "</div></section>";
     }
 
     function casesHTML(list) {
