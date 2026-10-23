@@ -212,6 +212,21 @@
 
   "cases": [
     {
+      "title": "Recife Events: a daily cultural agenda built from Instagram",
+      "img": "image/recife-events.png",
+      "problem": "Recife's cultural agenda lives scattered across dozens of Instagram profiles of museums, theatres, fairs, cinemas and bars, with dates and prices often only inside the post artwork.",
+      "approach": "A scheduled AI agent reads about 60 profiles every morning through the browser, extracts events from captions and images into a validated JSON schema, and a small script turns them into the site's daily and 30-day agenda, with neighbourhood, time-of-day and date filters.",
+      "outcome": "A static site on GitHub Pages that refreshes itself daily, listing today's and upcoming events in Recife and Olinda with source links back to each original post.",
+      "tech": [
+        "AI agents",
+        "Web scraping",
+        "Data validation",
+        "GitHub Pages"
+      ],
+      "link": "https://antonioaurel.github.io/recife-events/",
+      "linkLabel": "Open the agenda"
+    },
+    {
       "title": "Bug & hotfix QA process: a branch map",
       "img": "image/bug-fix-process.png",
       "problem": "A save-freeze bug on the live build of a gallery app needed a fast, disciplined path from report to fix without destabilising the next release.",
